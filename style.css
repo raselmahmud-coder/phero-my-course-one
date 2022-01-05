@@ -15,4 +15,5 @@ body {
 }
 .row {
   flex: 50%;
+  padding: 500px;
 }
