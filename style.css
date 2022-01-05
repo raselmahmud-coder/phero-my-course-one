@@ -4,6 +4,10 @@ body {
   padding: 0%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+.container {
+  width: 90%;
+  background-color: cadetblue;
+}
 .color {
   color: aquamarine;
   background: #f7f7;
