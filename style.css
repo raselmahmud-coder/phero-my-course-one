@@ -9,6 +9,10 @@ body {
   background-color: cadetblue;
   margin: 0px auto;
 }
-.color {
-  color: aquamarine;
+
+.main-wrap {
+  display: flex;
+}
+.row {
+  flex: 50%;
 }
