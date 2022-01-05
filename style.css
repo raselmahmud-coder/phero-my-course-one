@@ -4,3 +4,7 @@ body {
   padding: 0%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+.color {
+  color: aquamarine;
+  background: #f7f7;
+}
