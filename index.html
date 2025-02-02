@@ -1,171 +1,287 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <section class="container">
-      <div class="main-wrap">
-        <div class="row wrap-one">
-          <div class="for-border">
-            <h1 class="hd-one">Stay Focused on</h1>
-            <h1 class="hd-two">Mission 2022</h1>
-          </div>
-          <p class="get-paragraph">
-            Lorem ipsum dolor sit amet, usu cu esse possit referrentur, at eam
-            falli deterruisset. No duo populo animal noluisse, enim
-          </p>
-          <button class="btn">
-            <a
-              href="http://google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Explore Now</a
-            >
-          </button>
-          <p class="down-txt">Scroll down to explore more about us</p>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rasel Mahmud - Web Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              light: '#4338ca', // indigo-800
+              dark: '#f97316', // blue-900
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    @layer components {
+      /* .btn-primary {
+      @apply py-1.5 px-3 text-center bg-blue-700 rounded-md text-white;
+  } */
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    .transition-transform {
+      transition-property: transform;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+  <header class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-10 transition-colors duration-300">
+    <nav class="container mx-auto px-6 py-3">
+      <div class="flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold text-primary-light dark:text-primary-dark">Rasel Mahmud</a>
+        <div class="hidden md:flex space-x-6">
+          <a href="#about"
+            class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">About</a>
+          <a href="#projects"
+            class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Projects</a>
+          <a href="#contact"
+            class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Contact</a>
         </div>
-        <div class="row wrap-two">
-          <img src="./images/person/person-5.png" alt="" />
+        <div class="flex items-center">
+          <button id="darkModeToggle"
+            class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300 mr-4"
+            aria-label="Toggle dark mode">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+          <button id="mobileMenuToggle" class="md:hidden focus:outline-none" aria-label="Toggle mobile menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
         </div>
       </div>
-      <section class="second-row">
-        <div class="mission">
-          <h1>My Mission in <span>2022</span></h1>
-        </div>
-        <div class="mission-columns">
-          <div class="mission-column">
-            <div class="row-one">
-              <img
-                src="./images/illustrators/illustrator-1.png"
-                alt=""
-                class="image"
-              />
-              <h1 class="heading">Mission</h1>
-              <p class="pera">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-              </p>
-            </div>
-          </div>
-          <div class="mission-column">
-            <div class="row-one">
-              <img
-                src="./images/illustrators/illustrator-2.png"
-                alt=""
-                class="image"
-              />
-              <h1 class="heading">Mission</h1>
-              <p class="pera">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-              </p>
-            </div>
-          </div>
-          <div class="mission-column">
-            <div class="row-one">
-              <img
-                src="./images/illustrators/illustrator-3.png"
-                alt=""
-                class="image"
-              />
-              <h1 class="heading">Mission</h1>
-              <p class="pera">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="develop">
-        <div class="col-one">
-          <img src="./images/pictures/coding.png" alt="" />
-        </div>
-        <div class="col-two">
-          <h1 class="dev-text">
-            Develop <br />
-            Without Limits
-          </h1>
-          <p class="pera-dev">
-            Lorem ipsum dolor sit amet, usu cu esse possit referrentur, at eam
-            falli deterruisset. No duo populo animal noluisse, enim deterruisset
-            eos et. An mundi noster pri, ea eos quas expetendis scripserit,
-            affert gubergren dissentias et cum
-          </p>
-          <a href="#" class="btn">Read the Documentation</a>
-        </div>
-      </section>
-      <section class="develop">
-        <div class="col-two">
-          <h1 class="dev-text">
-            Know our <br />
-            Global Community
-          </h1>
-          <p class="pera-dev">
-            Lorem ipsum dolor sit amet, usu cu esse possit referrentur, at eam
-            falli deterruisset. No duo populo animal noluisse, enim deterruisset
-            eos et. An mundi noster pri, ea eos quas expetendis scripserit,
-            affert gubergren dissentias et cum
-          </p>
-          <a href="#" class="btn">Read the Documentation</a>
-        </div>
-        <div class="col-one">
-          <img src="./images/pictures/project.png" alt="" />
-        </div>
-      </section>
-      <!-- ======= ====Slider section code start here ============ -->
-      <section class="top-slider">
-        <div class="hd-slider">
-          <h1>Silder Hover <span>And See The Output</span></h1>
-        </div>
-        <div>
-          <ul class="slider">
-            <li>
-              <input type="radio" id="slide1" name="slide" checked />
-              <label for="slide1"></label>
-              <img
-                src="https://dribbble.s3.amazonaws.com/users/322/screenshots/872485/coldchase.jpg"
-                alt="Panel 1"
-              />
-            </li>
-            <li>
-              <input type="radio" id="slide2" name="slide" />
-              <label for="slide2"></label>
-              <img
-                src="https://dribbble.s3.amazonaws.com/users/322/screenshots/980517/icehut_sm.jpg"
-                alt="Panel 2"
-              />
-            </li>
-            <li>
-              <input type="radio" id="slide3" name="slide" />
-              <label for="slide3"></label>
-              <img
-                src="https://dribbble.s3.amazonaws.com/users/322/screenshots/943660/hq_sm.jpg"
-                alt="Panel 3"
-              />
-            </li>
-            <li>
-              <input type="radio" id="slide4" name="slide" />
-              <label for="slide4"></label>
-              <img
-                src="https://dribbble.s3.amazonaws.com/users/322/screenshots/599584/home.jpg"
-                alt="Panel 4"
-              />
-            </li>
-          </ul>
-        </div>
-      </section>
-    </section>
-    <footer class="our-fot">
-      <h2 class="footer-head">Mission <span>2022</span></h2>
-      <span class="sm-txt"
-        >Hard work, Perseverance, and Determination for 2022</span
-      >
+    </nav>
+    <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-800 transition-colors duration-300">
+      <a href="#about"
+        class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">About</a>
+      <a href="#projects"
+        class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Projects</a>
+      <a href="#contact"
+        class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Contact</a>
+    </div>
+  </header>
 
-  </body>
+  <main class="container mx-auto px-6 py-20">
+    <section id="about" class="mb-20 pt-16 animate-fade-in-up">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 text-primary-light dark:text-primary-dark">Hi, I'm Rasel Mahmud</h1>
+      <p class="text-xl mb-8">A passionate web developer creating responsive and accessible websites.</p>
+      <a href="#contact"
+        class="bg-primary-light dark:bg-primary-dark text-white px-6 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors duration-300">Get
+        in touch</a>
+    </section>
+
+    <section id="projects" class="mb-20 animate-fade-in-up" style="animation-delay: 0.2s;">
+      <h2 class="text-3xl font-bold mb-8 text-primary-light dark:text-primary-dark">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div
+          class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:scale-105 transition-transform">
+          <h3 class="text-xl font-semibold mb-2">Responsive Blog Platform</h3>
+          <p class="mb-4">A fully responsive blog platform built with Next.js and Tailwind CSS.</p>
+          <a href="#"
+            class="text-primary-light dark:text-primary-dark hover:underline transition-colors duration-300">View
+            Project →</a>
+        </div>
+        <div
+          class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:scale-105 transition-transform">
+          <h3 class="text-xl font-semibold mb-2">Task Management App</h3>
+          <p class="mb-4">A React-based task management application with drag-and-drop functionality.</p>
+          <a href="#"
+            class="text-primary-light dark:text-primary-dark hover:underline transition-colors duration-300">View
+            Project →</a>
+        </div>
+        <div
+          class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:scale-105 transition-transform">
+          <h3 class="text-xl font-semibold mb-2">E-commerce Website</h3>
+          <p class="mb-4">A full-stack e-commerce platform built with Node.js, Express, and MongoDB.</p>
+          <a href="#"
+            class="text-primary-light dark:text-primary-dark hover:underline transition-colors duration-300">View
+            Project →</a>
+        </div>
+        <div
+          class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:scale-105 transition-transform">
+          <h3 class="text-xl font-semibold mb-2">Weather Dashboard</h3>
+          <p class="mb-4">A weather dashboard using OpenWeatherMap API and Chart.js for data visualization.</p>
+          <a href="#"
+            class="text-primary-light dark:text-primary-dark hover:underline transition-colors duration-300">View
+            Project →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="animate-fade-in-up" style="animation-delay: 0.4s;">
+      <h2 class="text-3xl font-bold mb-8 text-primary-light dark:text-primary-dark">Get in Touch</h2>
+      <form class="max-w-lg mx-auto">
+        <div class="mb-4">
+          <label for="name" class="block mb-2">Name</label>
+          <input type="text" id="name" name="name"
+            class="w-full px-4 py-2 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark transition-all duration-300"
+            required>
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block mb-2">Email</label>
+          <input type="email" id="email" name="email"
+            class="w-full px-4 py-2 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark transition-all duration-300"
+            required>
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block mb-2">Message</label>
+          <textarea id="message" name="message" rows="4"
+            class="w-full px-4 py-2 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark transition-all duration-300"
+            required></textarea>
+        </div>
+        <button type="submit"
+          class="bg-primary-light dark:bg-primary-dark text-white px-6 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors duration-300">Send
+          Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-white dark:bg-gray-800 mt-12 transition-colors duration-300">
+    <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+      <p>&copy; 2024 Rasel Mahmud. All rights reserved.</p>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="https://github.com/Badrnej?tab=repositories"
+          class="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300"
+          aria-label="GitHub">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/badr-nejaa/"
+          class="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300"
+          aria-label="LinkedIn">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
+        </a>
+        <a href="https://x.com/BadrNejaa"
+          class="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300"
+          aria-label="X">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5  0 00-.08-.83A7.72 7.72 0 0023 3z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const html = document.documentElement;
+
+    darkModeToggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      localStorage.setItem('darkMode', html.classList.contains('dark'));
+    });
+
+    // Check for saved dark mode preference
+    if (localStorage.getItem('darkMode') === 'true' ||
+      (!('darkMode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      html.classList.add('dark');
+    }
+
+    // Mobile menu toggle
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileMenuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        const yOffset = -60; // Adjust this value based on your header height
+        const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({ top: y, behavior: 'smooth' });
+
+        // Close mobile menu if open
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in-up');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+
+    // Form submission (replace with your own logic)
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Form submitted! (Replace this with your own logic)');
+      form.reset();
+    });
+
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {}
+      }
+    }
+  </script>
+</body>
+
 </html>
